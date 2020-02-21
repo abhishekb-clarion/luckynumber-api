@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Result</h1>
+
+<p th:text="'Name: ' + ${user.name}"></p>
+<p th:text="'Name Number: ' + ${user.nameNumber}"></p>
+<br>
+<p th:text="'Birth Date: ' + ${user.birthDate}"></p>
+<p th:text="'Lucky Number: ' + ${user.luckyNumber}"></p>
+<br>
+<p th:text="'Result: ' + ${user.message}"></p>
+<p th:text="${user.suggestion}"></p>
+<br>
+<input type="button"  value="Check Again" onclick="location.href='/'">
+
+</body>
+</html>

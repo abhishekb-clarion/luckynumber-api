@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lucky Number</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Check Your Lucky Number</h1>
+
+<form action="#" th:action="@{/checkLuckyNumber}" th:object="${user}" method="post">
+    <p>
+        Name: <input type="text" pattern="[A-Za-z]*" th:field="*{name}" th:required="required">
+    </p>
+    <p>
+        Birth Date: <input type="date" min="1900-01-01" max="2020-01-01" th:field="*{birthDate}" th:required="required">
+    </p>
+    <p>
+        <input type="submit" value="Check"/> <input type="reset" value="Reset">
+    </p>
+</form>
+
+</body>
+</html>
